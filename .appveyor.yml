@@ -1,6 +1,6 @@
 image:
 - Visual Studio 2017
-- Ubuntu
+#- Ubuntu  # unstable CI image
 
 stack: python 3
 
