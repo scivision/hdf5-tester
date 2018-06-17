@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/scivision/hdf5-tester.svg?branch=master)](https://travis-ci.com/scivision/hdf5-tester)
+[![Coverage Status](https://coveralls.io/repos/github/scivision/hdf5-tester/badge.svg?branch=master)](https://coveralls.io/github/scivision/hdf5-tester?branch=master)
 [![Build status](https://ci.appveyor.com/api/projects/status/vfvtqnnyuhm6qeqh?svg=true)](https://ci.appveyor.com/project/scivision/hdf5-tester)
 
 
