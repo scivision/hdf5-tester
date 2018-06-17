@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from numpy.distutils.core import setup, Extension
+from setuptools import setup
 
 install_requires = ['h5py']
 tests_require = ['pytest', 'coveralls', 'flake8', 'mypy']
