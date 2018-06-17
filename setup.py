@@ -1,11 +1,12 @@
 #!/usr/bin/env python
-from setuptools import setup
+from setuptools import setup, find_packages
 
 install_requires = ['h5py']
 tests_require = ['pytest', 'coveralls', 'flake8', 'mypy']
 
 # %% install
 setup(name='HDF5tester',
+      packages=find_packages(),
       description='Test HDF5 files with Python and h5py',
       author='Michael Hirsch, Ph.D.',
       url='https://github.com/scivision/hdf5-tester',
