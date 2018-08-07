@@ -3,8 +3,8 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/vfvtqnnyuhm6qeqh?svg=true)](https://ci.appveyor.com/project/scivision/hdf5-tester)
 
 
-# hdf5-tests
-Basic, easy, quick HDF5 recursive check for file errors with Python and h5py
+# HDF5 Tests using h5py
+Basic, easy, quick HDF5 recursive check for file errors with Python and `h5py`
 
 
 ## Check whole HDF5
