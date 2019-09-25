@@ -16,21 +16,22 @@ That is, the only way to check an HDF5 file for corruption is to read every chun
 from pathlib import Path
 import hdf5tester as h5t
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     from argparse import ArgumentParser
+
     p = ArgumentParser()
-    p.add_argument('fn', help='path to glob or HDF5 filename')
-    p.add_argument('var', help='variable to check on error', nargs='?')
-    p.add_argument('-v', '--verbose', action='count', default=0)
+    p.add_argument("fn", help="path to glob or HDF5 filename")
+    p.add_argument("var", help="variable to check on error", nargs="?")
+    p.add_argument("-v", "--verbose", action="count", default=0)
     P = p.parse_args()
 
     f: Path = Path(P.fn).expanduser().resolve(strict=True)
     if f.is_dir():
-        flist = list(f.glob('*.h5'))
+        flist = list(f.glob("*.h5"))
     elif f.is_file():
         flist = [f]
     else:
-        raise FileNotFoundError(f'What is {flist}. It is not a path or file.')
+        raise FileNotFoundError(f"What is {flist}. It is not a path or file.")
 
     for fn in flist:
         h5t.checkh5(fn, P.var)
