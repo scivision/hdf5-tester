@@ -13,8 +13,8 @@ jobs:
         python-version: '3.x'
     - run: pip install -e .[tests,lint]
     - run: flake8
-    - run: mypy .
-    - run: pytest -r a -v
+    - run: mypy
+    - run: pytest
 
   macos:
     runs-on: macos-latest
@@ -24,7 +24,7 @@ jobs:
       with:
         python-version: '3.x'
     - run: pip install -e .[tests]
-    - run: pytest -r a -v
+    - run: pytest
 
   windows:
     runs-on: windows-latest

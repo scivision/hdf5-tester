@@ -1,12 +1,13 @@
+from __future__ import annotations
 import logging
 from pathlib import Path
 import h5py
-from typing import Union, List, Tuple
+import typing as T
 
 __all__ = ["checkh5"]
 
 
-def checkh5(fn: Path, var: Union[str, List[str]] = None):
+def checkh5(fn: Path, var: T.Optional[str | list[str]] = None):
     fn = Path(fn).expanduser().resolve(strict=True)
 
     if var:
@@ -33,7 +34,7 @@ def h5print(name: str, obj):
         obj.visititems(h5print)
 
 
-def checkh5_var(fn: Path, var: str) -> Tuple[int]:
+def checkh5_var(fn: Path, var: str) -> tuple[int, ...]:
     assert isinstance(var, str)
     print("checking", fn.name, var)
     with h5py.File(fn, "r") as f:
